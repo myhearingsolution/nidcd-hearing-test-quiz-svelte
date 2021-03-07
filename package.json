@@ -2,7 +2,7 @@
   "name": "nidcd-hearing-test-quiz-svelte",
   "author": "Ben Cates",
   "description": "A Svelte port of https://www.nidcd.nih.gov/health/do-you-need-hearing-test-quiz",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/myhearingsolution/nidcd-hearing-test-quiz-svelte",
   "repository": {
     "type": "git",

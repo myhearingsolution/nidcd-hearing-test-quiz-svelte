@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { createEventDispatcher } from 'svelte'
+  import { createEventDispatcher } from "svelte";
 
-  export let yesAnswerCount: number
+  export let yesAnswerCount: number;
 
-  const dispatch = createEventDispatcher<{ resetQuiz: undefined }>()
+  const dispatch = createEventDispatcher<{ resetQuiz: undefined }>();
 
-  $: needsHearingTest = yesAnswerCount > 2
+  $: needsHearingTest = yesAnswerCount > 2;
 </script>
 
 <div class="results" id="results">
@@ -62,9 +62,14 @@
     </p>
     <div class="result-links">
       <!-- svelte-ignore a11y-invalid-attribute -->
-      <a id="play-again" href="#" on:click={() => dispatch('resetQuiz')}
-        >Retake Quiz</a
-      ><a
+      <a
+        id="play-again"
+        href="#"
+        on:click|preventDefault={() => dispatch("resetQuiz")}
+      >
+        Retake Quiz
+      </a>
+      <a
         id="learn-more"
         href="https://www.nidcd.nih.gov/hearing"
         target="_blank">Learn More</a

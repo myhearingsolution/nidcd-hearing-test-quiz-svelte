@@ -1,9 +1,9 @@
 <script lang="ts">
-  import EmbedModal from './EmbedModal.svelte'
-  import DisclaimerModal from './DisclaimerModal.svelte'
-  import InfoModal from './InfoModal.svelte'
+  import EmbedModal from "./EmbedModal.svelte";
+  import DisclaimerModal from "./DisclaimerModal.svelte";
+  import InfoModal from "./InfoModal.svelte";
 
-  let currentModal: 'embed' | 'disclaimer' | 'info' | false = false
+  let currentModal: "embed" | "disclaimer" | "info" | false = false;
 </script>
 
 <div id="widget-logos">
@@ -14,30 +14,38 @@
     height="640"
   />
 </div>
-{#if currentModal === 'embed'}
+{#if currentModal === "embed"}
   <EmbedModal on:close={() => (currentModal = false)} />
 {/if}
-{#if currentModal === 'disclaimer'}
+{#if currentModal === "disclaimer"}
   <DisclaimerModal on:close={() => (currentModal = false)} />
 {/if}
-{#if currentModal === 'info'}
+{#if currentModal === "info"}
   <InfoModal on:close={() => (currentModal = false)} />
 {/if}
 <div id="embed-info-container">
   <p id="footer_links">
     <!-- svelte-ignore a11y-invalid-attribute -->
-    <a id="embed-link" href="#" on:click={() => (currentModal = 'embed')}>
+    <a
+      id="embed-link"
+      href="#"
+      on:click|preventDefault={() => (currentModal = "embed")}
+    >
       Share This</a
     >
     <!-- svelte-ignore a11y-invalid-attribute -->
-    <a id="info-link" href="#" on:click={() => (currentModal = 'info')}>
+    <a
+      id="info-link"
+      href="#"
+      on:click|preventDefault={() => (currentModal = "info")}
+    >
       Info
     </a>
     <!-- svelte-ignore a11y-invalid-attribute -->
     <a
       id="disclaimer-link"
       href="#"
-      on:click={() => (currentModal = 'disclaimer')}
+      on:click|preventDefault={() => (currentModal = "disclaimer")}
     >
       Disclaimer
     </a>

@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { createEventDispatcher } from 'svelte'
+  import { createEventDispatcher } from "svelte";
 
-  const dispatch = createEventDispatcher<{ close: undefined }>()
+  const dispatch = createEventDispatcher<{ close: undefined }>();
 </script>
 
 <div id="disclaimer-modal" class="modal" style="display: block">
@@ -14,7 +14,11 @@
   </p>
   <div class="return-container">
     <!-- svelte-ignore a11y-invalid-attribute -->
-    <a href="#" class="return-link" on:click={() => dispatch('close')}>
+    <a
+      href="#"
+      class="return-link"
+      on:click|preventDefault={() => dispatch("close")}
+    >
       Return
     </a>
   </div>

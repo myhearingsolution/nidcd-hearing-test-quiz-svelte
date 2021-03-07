@@ -8,7 +8,10 @@
   <div id="start-container">
     <h2>
       <!-- svelte-ignore a11y-invalid-attribute -->
-      <a id="img-start-link" href="#" on:click={() => dispatch("startQuiz")}
+      <a
+        id="img-start-link"
+        href="#"
+        on:click|preventDefault={() => dispatch("startQuiz")}
         ><img
           alt="Do you need a hearing test?"
           src="https://www.nidcd.nih.gov/sites/default/files/Widgets/HearingWidget/Images/title_speech_balloons.png"
@@ -19,7 +22,10 @@
     </h2>
     <p id="startlink">
       <!-- svelte-ignore a11y-invalid-attribute -->
-      <a id="start-link" href="#" on:click={() => dispatch("startQuiz")}
+      <a
+        id="start-link"
+        href="#"
+        on:click|preventDefault={() => dispatch("startQuiz")}
         >Take This Quick Quiz</a
       >
     </p>

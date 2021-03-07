@@ -35,7 +35,7 @@
   </p>
   <div class="return-container">
     <!-- svelte-ignore a11y-invalid-attribute -->
-    <a href="#" class="return-link" on:click={() => dispatch('close')}>
+    <a href="#" class="return-link" on:click|preventDefault={() => dispatch('close')}>
       Return
     </a>
   </div>
